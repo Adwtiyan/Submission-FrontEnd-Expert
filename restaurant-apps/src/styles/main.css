@@ -1,0 +1,424 @@
+    @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Comfortaa', cursive;
+        max-width: 100%;
+        color: whitesmoke;
+    }
+    
+    body {
+        background-image: url("../../src/public/images/heros/bg-2.jpg");
+        background-size: auto;
+    }
+    
+    .drawer {
+        display: flex;
+        background-color: rgb(143, 146, 143);
+        justify-content: space-around;
+        align-items: center;
+        color: white;
+        height: 50px;
+        z-index: 99;
+    }
+
+    .drawer .logo:hover {
+        transform: scale(1.2);
+        transition: 0.5s;
+    }
+    
+    .drawer ul li a {
+        padding: 16px;
+        display: block;
+        color: black;
+        text-decoration: none;
+        font-size: 0.8em;
+        font-weight: 600;
+    }
+    
+    .drawer ul li a:hover {
+        color: white;
+        line-height: 12px;
+        background-color: rgb(166, 166, 166);
+        text-decoration: underline;
+    }
+    
+    .drawer ul {
+        display: flex;
+        width: 40%;
+        list-style: none;
+        justify-content: space-between;
+    }
+    
+    img {
+        display: block;
+    }
+    
+    .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 0;
+        background-color: #bf1722;
+        color: white;
+        padding: 8px;
+        z-index: 100;
+    }
+    
+    .skip-link:focus {
+        top: 0;
+    }
+    
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        height: 44px;
+        justify-content: space-between;
+        position: relative;
+    }
+    
+    .hamburger input {
+        position: absolute;
+        width: 44px;
+        height: 44px;
+        opacity: 0;
+        top: -5px;
+        cursor: pointer;
+        z-index: 2;
+    }
+    
+    .hamburger span {
+        display: block;
+        width: 44px;
+        height: 3px;
+        background-color: black;
+        border-radius: 3px;
+        transition: all 0.5s;
+    }
+    
+    #jumbotron {
+        width: 100%;
+        padding: 4rem 0;
+    }
+    
+    .title {
+        font-size: 3rem;
+        font-weight: 600;
+        color: black;
+        text-align: center;
+    }
+    .title__main{
+        font-size: 2rem;
+        font-weight: 600;
+        color: black;
+        text-align: center;
+    }
+    .title__option{
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: black;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .text {
+        font-size: 1rem;
+        font-weight: 400;
+        color: black;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    #jumbotron .content {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .hero .content .images .thumbnail {
+        max-height: 600px;
+        width: 80%;
+        background-size: cover;
+        min-height: 100%;
+    }
+       /*
+    Main Content
+  */
+   
+  main {
+    padding: 32px;
+    flex: 1;
+  }
+   
+  .content {
+    margin: 0 auto;
+    min-height: 100%;
+  }
+   
+  .content .content__heading {
+    font-weight: normal;
+  }
+   
+     /*
+   Like
+*/
+.like {
+  font-size: 18px;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: #db0000;
+  color: white;
+  border: 0;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+   
+  /*
+    restaurants
+  */
+   
+  .restaurants {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 32px 0;
+  }
+   
+   
+  /*
+    restaurant Item
+  */
+   
+  .restaurant-item {
+      background-color: white;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+   
+  .restaurant-item__header {
+    position: relative;
+  }
+   
+  .restaurant-item .restaurant-item__header .restaurant-item__header__poster {
+    width: 100%;
+  }
+   
+  .restaurant-item .restaurant-item__header .restaurant-item__header__rating {
+    position: absolute;
+    padding: 8px;
+    bottom: 20px;
+    left: 0;
+    display: inline-block;
+    background-color: rgb(143, 146, 143);
+    color: white;
+  }
+   
+  .restaurant-item .restaurant-item__header .restaurant-item__header__rating .restaurant-item__header__rating__score {
+    margin-left: 10px;
+  }
+   
+  .restaurant-item .restaurant-item__content {
+    padding: 16px;
+  }
+   
+  .restaurant-item .restaurant-item__content h3 {
+    margin: 0 0 10px 0;
+  }
+   
+  .restaurant-item .restaurant-item__content h3 a {
+    color: black;
+    text-decoration: none;
+    padding: 15px;
+  }
+  .restaurant-item .restaurant-item__content h3 a:hover{
+      color: red;
+      text-decoration: underline;
+  }
+  .restaurant-item .restaurant-item__content p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    color: black;
+  }
+  /*
+    restaurant
+  */
+   
+  .restaurant {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px 16px;
+  }
+   
+  .restaurant .restaurant__poster {
+    width: 100%;
+    max-width: 400px;
+  }
+   
+  .restaurant .restaurant__info h4 {
+    margin: 8px 0;
+  }
+   
+  .review-title {
+    font-weight: 600;
+    font-size: 18px;
+    margin: 32px 0;
+    color:  black;
+}
+
+.review-item {
+    padding: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: white;
+    margin-bottom: 15px;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.review-name {
+    text-transform: uppercase;
+    font-size: 15px;
+    color: black;
+}
+
+.review-date {
+    margin: 8px;
+    color: black;
+}
+
+.review-comment {
+    color: black;
+    font-size: 15px;
+} 
+
+    footer {
+        padding: 16px;
+    }
+    
+    footer .text {
+        text-align: center;
+        font-weight: bold;
+    }
+    
+    @media screen and (min-width:1200px) {
+        #jumbotron .content .images .thumbnail {
+            width: 90%;
+        }
+        #jumbotron .content .images {
+            min-width: 1000px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .restaurants {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+    
+    @media screen and (max-width:1200px) {
+        #jumbotron .content .images {
+            width: 100%;
+            justify-content: center;
+        }
+        #jumbotron .content .images .thumbnail {
+            width: 100%;
+        }
+        .restaurants {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    
+    @media screen and (max-width: 768px) {
+        .drawer ul {
+            width: 50%;
+        }
+        #jumbotron .title {
+            font-size: 1.5rem;
+        }
+        #jumbotron .text {
+            margin-top: 1em;
+            font-size: 1rem;
+        }
+        .thumbnail {
+            width: 100%;
+        }
+        .restaurants {
+            grid-template-columns: 1fr 1fr;
+        }
+       
+        .restaurant {
+            grid-template-columns: 1fr;
+        }
+       
+        .restaurant .restaurant__title {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+       
+        .restaurant .restaurant__overview {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+    }
+    
+    @media screen and (max-width: 576px) {
+        .hamburger {
+            display: flex;
+            z-index: 4;
+        }
+        .drawer ul {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100vh;
+            width: 100%;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgb(143, 146, 143);
+            z-index: 3;
+            transform: translateY(-100%);
+            transition: all 1s;
+            opacity: 0;
+        }
+        .drawer ul.open {
+            transform: translateY(0);
+            opacity: 1;
+            background-color: rgb(117, 117, 117);
+        }
+        .drawer ul li a {
+            color: white;
+            text-decoration: underline;
+        }
+        .drawer .logo {
+            z-index: 4;
+        }
+        #jumbotron .title {
+            font-size: 1rem;
+        }
+        #jumbotron .text {
+            margin-top: 1em;
+            font-size: 0.8rem;
+        }
+        .thumbnail {
+            width: 100%;
+        }
+        .restaurants {
+            grid-template-columns: 1fr;
+        }
+    }
